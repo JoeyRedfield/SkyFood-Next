@@ -7,7 +7,6 @@
         <artifactId>sky-take-out</artifactId>
         <groupId>com.sky</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -29,7 +28,7 @@
         <!-- Knife4j for Spring Boot 3 -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 </project>

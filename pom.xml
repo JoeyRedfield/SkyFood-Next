@@ -32,6 +32,7 @@
         <jjwt.api>0.11.5</jjwt.api>
         <jaxb.api>4.0.2</jaxb.api> <!-- jakarta.xml.bind -->
         <poi>5.2.5</poi>
+        <knife4jui>2.2.0</knife4jui>
     </properties>
 
     <dependencyManagement>
@@ -79,11 +80,17 @@
                 <version>${pagehelper}</version>
             </dependency>
 
-            <!-- Knife4j -->
+            <!-- Knife4j, 这里必须带jakarta -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
                 <version>${knife4j}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${knife4jui}</version>
             </dependency>
 
             <!-- AspectJ -->
