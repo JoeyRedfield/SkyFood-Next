@@ -17,6 +17,7 @@
         <module>sky-common</module>
         <module>sky-pojo</module>
         <module>sky-server</module>
+        <module>sky-ai</module>
     </modules>
     <properties>
         <java.version>17</java.version>

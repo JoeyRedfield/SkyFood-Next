@@ -2,18 +2,25 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sky-common" />
-        <module name="sky-server" />
         <module name="sky-pojo" />
+        <module name="sky-ai" />
+        <module name="sky-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sky-chat" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sky-ai" options="-parameters" />
+      <module name="sky-chat" options="-parameters" />
       <module name="sky-common" options="-parameters" />
       <module name="sky-pojo" options="-parameters" />
       <module name="sky-server" options="-parameters" />
