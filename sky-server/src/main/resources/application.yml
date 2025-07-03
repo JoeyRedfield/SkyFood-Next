@@ -18,6 +18,21 @@ spring:
       port: ${sky.redis.port}
       password: ${sky.redis.password}
       database: ${sky.redis.database}
+  ai:
+    zhipuai:
+      api-key: ${sky.ai.zhipuai.apikey}
+      chat:
+        options:
+          model: GLM-4-Air
+      base-url: https://open.bigmodel.cn/api/paas
+    chat:
+      memory:
+        repository:
+          jdbc:
+            platform: mariadb
+            initialize-schema: always  # 禁用自动初始化schema
+
+
 
 #springdoc:
 #  api-docs:
