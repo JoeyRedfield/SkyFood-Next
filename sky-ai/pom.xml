@@ -16,11 +16,22 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- Spring AI Core -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.ai/spring-ai-core -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-starter-model-zhipuai</artifactId>
-            <version>1.0.0</version>
+            <artifactId>spring-ai-core</artifactId>
+            <version>1.0.0-M6</version>
         </dependency>
+
+        <!-- DashScope Starter -->
+        <dependency>
+            <groupId>com.alibaba.cloud.ai</groupId>
+            <artifactId>spring-ai-alibaba-starter-dashscope</artifactId>
+            <version>1.0.0.2</version>
+        </dependency>
+
+        <!-- JDBC Chat Memory -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-chat-memory-repository-jdbc</artifactId>
