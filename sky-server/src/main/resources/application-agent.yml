@@ -1,0 +1,65 @@
+# AI智能体配置
+agent:
+  # 模型配置
+  model:
+    # 使用的模型名称
+    name: qwen-plus
+    # 模型温度（0.0-1.0）
+    temperature: 0.7
+    # 最大token数
+    max-tokens: 2000
+    # 超时时间（毫秒）
+    timeout: 30000
+  
+  # ReAct配置
+  react:
+    # 最大思考轮数
+    max-thoughts: 5
+    # 最大动作轮数
+    max-actions: 3
+    # 是否启用详细日志
+    verbose: true
+  
+  # 工具配置
+  tools:
+    # 是否启用工具调用
+    enabled: true
+    # 工具调用超时时间（毫秒）
+    timeout: 10000
+    # 并发工具调用数量限制
+    max-concurrent: 3
+  
+  # 客服配置
+  customer-service:
+    # 欢迎消息
+    welcome-message: "您好！欢迎来到苍穹外卖！我是您的AI智能客服小助手，很高兴为您服务！"
+    # 默认回复
+    default-reply: "抱歉，我没有理解您的问题，请您重新描述一下，或者联系人工客服：400-8888-888"
+    # 错误回复
+    error-reply: "抱歉，我现在遇到了一些技术问题，请稍后再试或联系人工客服：400-8888-888"
+    # 快速回复配置
+    quick-replies:
+      - keyword: "你好|您好|hi|hello"
+        reply: "您好！很高兴为您服务！我可以帮您查询订单、推荐菜品、了解店铺信息等。请告诉我您需要什么帮助？"
+      - keyword: "谢谢|感谢"
+        reply: "不客气！为您服务是我的荣幸。如果还有其他问题，随时都可以问我哦！"
+      - keyword: "再见|拜拜|goodbye|bye"
+        reply: "再见！期待下次为您服务。记得常来苍穹外卖享受美食哦！👋"
+      - keyword: "人工客服|转人工|人工服务"
+        reply: "好的，正在为您转接人工客服。客服热线：400-8888-888，工作时间：9:00-22:00"
+
+# DashScope配置
+spring:
+  ai:
+    dashscope:
+      # API密钥（实际使用时请配置真实的API Key）
+      api-key: ${DASHSCOPE_API_KEY:your-dashscope-api-key}
+      chat:
+        options:
+          # 模型名称
+          model: qwen-plus
+          # 温度
+          temperature: 0.7
+          # 最大token
+
+#          max-tokens: 2000
