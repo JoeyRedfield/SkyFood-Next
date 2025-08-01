@@ -202,7 +202,11 @@ public class ToolCallAgent extends ReActAgent {
         try {
             String actionPrompt = String.format("""
                 基于前面的思考，请决定下一步行动：
-                
+
+                **重要规则：**
+                1.  如果上一步是工具调用并且成功获取到信息，**必须**直接回复用户，**禁止**再次调用任何工具。
+                2.  只有在确实需要新信息时，才调用工具。
+
                 如果需要调用工具，请使用以下格式：
                 工具名称(参数)
                 
@@ -211,7 +215,7 @@ public class ToolCallAgent extends ReActAgent {
                 - dishRecommend(川菜)
                 - storeStatus()
                 
-                如果不需要调用工具，请直接回复用户。
+                如果不需要调用工具，请直接用自然语言回复用户。
                 
                 当前可用工具：
                 %s
